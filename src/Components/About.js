@@ -10,10 +10,11 @@ const About = () => {
         </p>
       </div>
       <div className="  py-10 px-7  ">
-        <h1 className=" text-6xl   font-serif flex justify-center sm:px-5 ">
+        <h1 className=" text-6xl   font-serif flex justify-center ">
           {" "}
-          The world's destinantion <br className=" " />
-          for design
+         <p> The world's destinantion <br className=" " />
+        <span className=" flex justify-center">designer here</span> 
+         </p>
         </h1>
         <div className=" py-7   ">
           <p className=" font-serif flex justify-center  text-xl">

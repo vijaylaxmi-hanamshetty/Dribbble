@@ -44,9 +44,9 @@ const imageItems = [
 const Slider = () => {
   return (
     <div className="py-10">
-      <Marquee2  className="" >
+      <Marquee2 className="">
         {imageItems.map((item, index) => (
-          <div key={index} className="inline-block mx-2">
+          <div key={index} className="inline-block mx-2 h-4">
             <img
               className="rounded-xl  w-64   object-cover" // Adjusted dimensions
               src={item.url}
