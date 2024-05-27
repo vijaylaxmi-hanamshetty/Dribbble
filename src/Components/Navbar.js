@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { FaAngleDown, FaSearch } from "react-icons/fa";
 import { Link, Route, Routes } from "react-router-dom";
-
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
-import Home from "./Home"
-import About from "./About"
+import Home from "./Home";
+import About from "./About";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -227,9 +226,9 @@ const Navbar = () => {
           </ul>
         )}
       </div>
-      <About/>
-      <Home/>
 
+      <About />
+      <Home />
       <Routes>
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />

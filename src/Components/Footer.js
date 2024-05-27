@@ -25,7 +25,7 @@ const Footer = () => {
     <footer className="text-black py-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row  items-center mb-6 lg:justify-center md:justify-between sm:justify-between">
-          <div className="font-cursive text-2xl font-semibold ">Dribbble</div>
+          <div className="font-cursive text-2xl font-semibold  ">Dribbble</div>
           <div className="flex space-x-6 justify-center px-10  ">
             {mainLinks.map((link) => (
               <a
