@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { FaAngleDown, FaSearch } from "react-icons/fa";
-import { Link, Route, Routes } from "react-router-dom";
-import SignIn from "./SignIn";
-import SignUp from "./SignUp";
-import Home from "./Home";
-import About from "./About";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -135,7 +131,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <ul className="md:hidden mt-4 flex flex-col space-y-4 items-center">
+          <ul className="md:hidden mt-4 flex flex-col space-y-4 item-center ">
             <li className="w-full">
               <div className="flex items-center bg-white border px-4 py-2 rounded-full">
                 <FaSearch className="mr-2 text-black" />
@@ -226,13 +222,6 @@ const Navbar = () => {
           </ul>
         )}
       </div>
-
-      <About />
-      <Home />
-      <Routes>
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/sign-up" element={<SignUp />} />
-      </Routes>
     </div>
   );
 };

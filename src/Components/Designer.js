@@ -5,7 +5,7 @@ const Designer = () => {
     <div className="   bg-yellow-200 ">
       <div className="py-10 ">
         <div className=" flex justify-center ">
-          <h1 className="  font-serif  sm:text-3xl lg:text-9xl   lg:px-56 ">
+          <h1 className="font-serif text-center text-4xl md:text-5xl lg:text-9xl lg:px-80">
             Find your next designer day
           </h1>
         </div>

@@ -1,21 +1,26 @@
-import React from "react"
+import React from "react";
 import Navbar from "./Components/Navbar";
-import Slider from "./Components/Slider";
+import { Route, Routes } from "react-router-dom";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import Inspiration from "./pages/Inspiration";
 import Footer from "./Components/Footer";
-import Designer from "./Components/Designer";
-import Explore from "./Components/Explore";
-
+import Home2 from "./Components/Home2";
+import Job from "./pages/Job";
 const App = () => {
   return (
     <div>
-      <Navbar/>
-      <Explore />
-      <Designer />
-      <Slider />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home2 />} />
+        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/inspiration" element={<Inspiration />} />
+        <Route path="//jobs" element={<Job />} />
+      </Routes>
       <Footer />
-      </div>
-  )
-    
+    </div>
+  );
 };
 
 export default App;

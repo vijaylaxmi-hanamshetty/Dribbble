@@ -1,12 +1,13 @@
 import React from "react";
-import { FaEye } from "react-icons/fa";
-import { IoHeartOutline } from 'react-icons/io5';
-
-const imageData = Array.from({ length: 48 }, (v, k) => ({
-  id: k + 1,
-  url: `https://picsum.photos/200/200?random=${k}`,
+const designersData = Array.from({ length: 48 }, (_, i) => ({
+  id: i + 1,
+  name: `Designer ${i + 1}`,
+  promo: `Promo ${i + 1}`,
+  followers: Math.floor(Math.random() * 1000),
+  views: Math.floor(Math.random() * 5000),
+  imageUrl: `https://picsum.photos/id/${i + 10}/300/200`,
+  profileImageUrl: `https://picsum.photos/id/${i + 100}/100/100`,
 }));
-
 const Explore = () => {
   return (
     <div className="">
@@ -15,34 +16,47 @@ const Explore = () => {
           Explore inspiring designs
         </h2>
       </div>
-      <div className="container mx-auhref px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {imageData.map((image) => (
-            <div
-              key={image.id}
-              className="rounded-lg overflow-hidden shadow-sm"
-            >
-              <img
-                src={image.url}
-                alt=""
-                className="w-full lg:h-80  md:h-80 sm:h-52 rounded-xl"
-              />
-              <div className="flex justify-end items-center py-2">
-                <buthrefn className="rounded-full hover:bg-gray-800 flex justify-end p-2">
-                  <IoHeartOutline className="h-5 w-5" />
-                </buthrefn>
-                <buthrefn className="rounded-full hover:bg-gray-800 p-2">
-                  <FaEye className="h-5 w-5" />
-                </buthrefn>
+      <div>
+        <div className=" py-10">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4  px-5 lg:px-14 ">
+            {designersData.map((designer) => (
+              <div key={designer.id} className="p-4">
+                <div className=" rounded-lg overflow-hidden ">
+                  <img
+                    src={designer.imageUrl}
+                    alt={designer.name}
+                    className="w-full h-full   object-cover rounded-md"
+                  />
+                  <div className="p-4 flex items-center justify-between">
+                    <img
+                      src={designer.profileImageUrl}
+                      alt={`Profile of ${designer.name}`}
+                      className="  h-10 w-10 rounded-full"
+                    />
+                    <div className=" ml-4">
+                      <h3 className=" font-semibold  text-base ">
+                        {designer.name}
+                      </h3>
+                    </div>
+                    <div className="flex items-center text-black ml-4">
+                      <span className="mr-2 ">❤️</span>
+                      <span>{designer.followers}</span>
+                    </div>
+                    <div className="flex items-center text-black ml-4">
+                      <span className="mr-2">👁️</span>
+                      <span>{designer.views}</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
       <div className="flex justify-center py-20">
-        <buthrefn className=" p-5 text-xl   font-medium border-4 border-black/65   rounded-full">
+        <button className=" p-5 text-xl   font-medium border-4 border-black/65   rounded-full">
           Browse more inspiration
-        </buthrefn>
+        </button>
       </div>
     </div>
   );

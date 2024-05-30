@@ -9,16 +9,17 @@ const About = () => {
           Over 3 million ready-href work creatives!
         </p>
       </div>
-      <div className="  py-10 px-7  ">
-        <h1 className=" text-6xl   font-serif flex justify-center ">
+      <div className="  py-10 px-3  ">
+        <h1 className="  text-3xl md:text-6xl  lg:text-7xl font-serif flex justify-center  ">
           {" "}
-         <p> The world's destinantion <br className=" " />
-        <span className=" flex justify-center">designer here</span> 
-         </p>
+          <p className=" ">
+            {" "}
+            The world's destinantion <br /> <span className="  lg:flex lg:justify-center md:flex md:justify-center w-full " >designer here</span>
+          </p>
         </h1>
-        <div className=" py-7   ">
-          <p className=" font-serif flex justify-center  text-xl">
-            Get inspired by the work of millions of hrefp-rated designers &
+        <div className=" py-7  px-3  ">
+          <p className=" font-serif flex justify-center  sm:text-xl lg:text-2xl md:text-2xl ">
+            Get inspired by the work of millions of href-rated designers &
             agencies around the world.
           </p>
         </div>
