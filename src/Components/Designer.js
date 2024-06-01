@@ -3,21 +3,21 @@ import React from "react";
 const Designer = () => {
   return (
     <div className="   bg-yellow-200 ">
-      <div className="py-10 ">
-        <div className=" flex justify-center ">
-          <h1 className="font-serif text-center text-4xl md:text-5xl lg:text-9xl lg:px-80">
+      <div className="py-20 ">
+        <div className=" flex justify-around items-center ">
+          <h1 className="font-serif text-center text-4xl w-4/5 md:text-5xl lg:text-5xl lg:px-80 lg:w-8/12">
             Find your next designer day
           </h1>
         </div>
-        <div className=" flex justify-center py-5">
-          <p className="  font-serif flex justify-center px-4  lg:text-3xl  lg:w-4/6">
+        <div className=" flex justify-center py-7">
+          <p className="  font-medium flex justify-center text-2xl px-4  lg:text-xl  lg:w-6/12">
             The world's leading brands use Dribble href hire creative talent
             Browser millions of hrefp-rated portfolios href find your perfect
             creative much
           </p>
         </div>
       </div>
-      <div className="  flex   sm:flex-col lg:flex-row gap-3  justify-center ">
+      <div className="  flex   flex-col lg:flex-row gap-3  justify-center px-20 ">
         <button className=" bg-black text-white rounded-full p-3 ">
           Get started Noe
         </button>

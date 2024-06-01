@@ -8,20 +8,18 @@ const Navbar = () => {
   const [dropdownOpen2, setDropdownOpen2] = useState(false);
 
   return (
-    <div className="bg-purple-100">
-      <div className="px-3">
+    <div className="bg-purple-50">
+      <div className="px-3 lg:py-3 lg:px-8">
         <nav className="container mx-auto flex justify-between items-center relative py-4">
-          <div className="font-cursive lg:pl-16 from-neutral-950">
-            <h1 className="text-4xl from-neutral-950 font-semibold">Dribble</h1>
-          </div>
-
+          {/* Left-side items */}
           <ul className="hidden md:flex items-center space-x-6">
+            <li></li>
             <li className="relative">
               <button
                 onClick={() => setDropdownOpen1(!dropdownOpen1)}
                 className="text-black flex items-center"
               >
-                <FaAngleDown className="mr-1" /> Find designers
+                Find designers <FaAngleDown className="ml-1" />
               </button>
               {dropdownOpen1 && (
                 <ul className="absolute mt-2 text-black rounded shadow-lg w-56 z-20 bg-white">
@@ -48,7 +46,7 @@ const Navbar = () => {
                 onClick={() => setDropdownOpen2(!dropdownOpen2)}
                 className="text-black flex items-center"
               >
-                <FaAngleDown className="mr-1" /> Courses
+                Courses <FaAngleDown className="ml-1" />
               </button>
               {dropdownOpen2 && (
                 <ul className="absolute mt-2 text-black rounded shadow-lg w-56 z-20 bg-white">
@@ -80,15 +78,28 @@ const Navbar = () => {
                 Go Pro
               </Link>
             </li>
-            <li className="flex items-center bg-white border px-4 py-2 rounded-full">
-              <FaSearch className="mr-2 text-black" />
-              <input
-                type="text"
-                placeholder="Search..."
-                className="outline-none w-full bg-transparent"
-              />
+          </ul>
+
+          {/* Centered Dribble logo */}
+          <div className="flex justify-center">
+            <div className="font-cursive text-center">
+              <Link to="/" className="text-4xl font-semibold">Dribble</Link>
+            </div>
+          </div>
+
+          {/* Right-side items */}
+          <ul className="flex items-center space-x-6">
+            <li className="hidden md:block ">
+              <div className="relative flex items-center  ">
+                <FaSearch className="absolute left-2 text-black" />
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="pl-8 pr-2 py-1 border rounded"
+                />
+              </div>
             </li>
-            <li>
+            <li className="hidden md:block">
               <Link to="/sign-in" className="text-black">
                 Sign In
               </Link>
@@ -96,52 +107,42 @@ const Navbar = () => {
             <li>
               <Link
                 to="/sign-up"
-                className="px-4 py-2 text-white bg-black rounded-md"
+                className="px-4 py-3 text-white bg-black rounded-full"
               >
                 Sign Up
               </Link>
             </li>
-          </ul>
-
-          {/* Hamburger Icon for Mobile */}
-          <div className="block md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="focus:outline-none"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+            <div className="block md:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="focus:outline-none"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d={
-                    !isOpen ? "M4 6h16M4 12h16m-7 6h7" : "M6 18L18 6M6 6l12 12"
-                  }
-                ></path>
-              </svg>
-            </button>
-          </div>
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d={
+                      !isOpen
+                        ? "M4 6h16M4 12h16m-7 6h7"
+                        : "M6 18L18 6M6 6l12 12"
+                    }
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </ul>
         </nav>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <ul className="md:hidden mt-4 flex flex-col space-y-4 item-center ">
-            <li className="w-full">
-              <div className="flex items-center bg-white border px-4 py-2 rounded-full">
-                <FaSearch className="mr-2 text-black" />
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  className="outline-none w-full bg-transparent"
-                />
-              </div>
-            </li>
+          <ul className="md:hidden mt-4 flex flex-col space-y-4 items-center">
             <li className="w-full relative">
               <button
                 onClick={() => setDropdownOpen1(!dropdownOpen1)}
@@ -206,17 +207,19 @@ const Navbar = () => {
                 Go Pro
               </Link>
             </li>
+            <li className="w-full flex items-center">
+              <div className="relative flex items-center w-full">
+                <FaSearch className="absolute left-3 text-black" />
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="pl-10 pr-2 py-2 border rounded w-full"
+                />
+              </div>
+            </li>
             <li>
               <Link to="/sign-in" className="text-black px-4 py-2 rounded">
                 Sign In
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/sign-up"
-                className="text-white bg-black px-4 py-2 rounded-md"
-              >
-                Sign Up
               </Link>
             </li>
           </ul>

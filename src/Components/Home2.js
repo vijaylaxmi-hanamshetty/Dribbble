@@ -4,16 +4,18 @@ import About from "./About";
 import Explore from "./Explore";
 import Slider from "./Slider";
 import Designer from "./Designer";
+import Navbar from "./Navbar";
 
 const Home2 = () => {
   return (
     <div>
-      <div className=" bg-purple-100">
-        <Home />
+      <div className=" bg-purple-50">
+        <Navbar/>
         <About />
+        <Home />
       </div>
       <div className=" bg-white">
-        <Explore />
+      <Explore />
         <Designer />
         <Slider />
       </div>

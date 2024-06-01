@@ -43,7 +43,11 @@ const Footer = () => {
             <p className="mb-4 md:mb-0 font-serif">&copy; 2024 Dribbble</p>
             <div className="flex flex-wrap space-x-6">
               {additionalLinks.map((link) => (
-                <a key={link.href} href={link.href} className="hover:underline font-serif">
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="hover:underline font-serif"
+                >
                   {link.text}
                 </a>
               ))}
