@@ -5,9 +5,9 @@ import { FcGoogle } from "react-icons/fc";
 
 const SignIn = () => {
   const links = [
-    { url: "#/", text: "Terms of Service" },
-    { url: "#/", text: "Privacy Policy" },
-    { url: "#/", text: "Notification Settings" },
+    { url: "#//", text: "Terms of Service" },
+    { url: "#//", text: "Privacy Policy" },
+    { url: "#//", text: "Notification Settings" },
   ];
 
   return (

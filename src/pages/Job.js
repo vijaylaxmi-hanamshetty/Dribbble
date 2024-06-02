@@ -5,7 +5,7 @@ import { IoMdSearch } from "react-icons/io";
 import { Formik, Form, Field } from "formik";
 import Slider from "../Components/Slider";
 import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
+import { Footer } from "../Components/Footer";
 
 const companies = [
   {
@@ -159,7 +159,7 @@ const Job = () => {
       <div className="py-28">
         <div className="flex justify-center">
           <h1 className="text-3xl font-serif md:text-5xl lg:text-6xl text-center">
-            The #1 job board for
+            The #/1 job board for
             <br />
             <span>graphic design jobs</span>
           </h1>

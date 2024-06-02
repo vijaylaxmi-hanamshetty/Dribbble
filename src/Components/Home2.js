@@ -5,6 +5,7 @@ import Explore from "./Explore";
 import Slider from "./Slider";
 import Designer from "./Designer";
 import Navbar from "./Navbar";
+import { Footer } from "./Footer";
 
 const Home2 = () => {
   return (
@@ -18,6 +19,7 @@ const Home2 = () => {
       <Explore />
         <Designer />
         <Slider />
+        <Footer/>
       </div>
     </div>
   );

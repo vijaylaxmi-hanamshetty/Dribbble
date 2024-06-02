@@ -5,7 +5,8 @@ import { FaHeart } from "react-icons/fa6";
 import { FaEye } from "react-icons/fa";
 import Navbar from "../Components/Navbar";
 import Slider from "../Components/Slider";
-import Footer from "../Components/Footer";
+import { Footer } from "../Components/Footer";
+
 
 const trendingSearches = [
   "Treanding search",
@@ -45,7 +46,7 @@ const Inspiration = () => (
         {trendingSearches.map((search, index) => (
           <div key={index}>
             <a
-              href="#/"
+              href="#//"
               className="inline-block bg-white text-black px-4 py-2 rounded-full border border-black"
             >
               {search}

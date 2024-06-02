@@ -80,15 +80,15 @@ const SignUp = () => {
           </Formik>
           <p className="mt-4 text-sm text-center text-gray-600">
             By creating an account you agree with our{" "}
-            <a href="#/" className="text-blue-600">
+            <a href="#//" className="text-blue-600">
               Terms of Service
             </a>
             ,{" "}
-            <a href="#/" className="text-blue-600">
+            <a href="#//" className="text-blue-600">
               Privacy Policy
             </a>
             , and our default{" "}
-            <a href="#/" className="text-blue-600">
+            <a href="#//" className="text-blue-600">
               Notification Settings
             </a>
             .

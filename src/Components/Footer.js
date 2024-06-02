@@ -1,62 +1,52 @@
-import React from "react";
+import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 
-const Footer = () => {
-  const mainLinks = [
-    { href: "#hire-talent", text: "Hire Talent" },
-    { href: "#inspiration", text: "Inspiration" },
-    { href: "#blog", text: "Blog" },
-    { href: "#about", text: "About" },
-    { href: "#careers", text: "Careers" },
-  ];
+const links = [
+  { href: "#", text: "For designers" },
+  { href: "#", text: "Hire talent" },
+  { href: "#", text: "inspiration" },
+  { href: "#", text: "Advertising" },
+  { href: "#", text: "Blog" },
+  { href: "#", text: "About" },
+  { href: "#", text: "Careers" },
+  { href: "#", text: "Support" },
+  
+];
+const socialLinks = [
+  { href: "#", icon: BsFacebook },
+  { href: "#", icon: BsInstagram },
+  { href: "#", icon: BsTwitter },
+ 
+];
 
-  const additionalLinks = [
-    { href: "#terms", text: "Terms" },
-    { href: "#privacy", text: "Privacy" },
-    { href: "#cookies", text: "Cookies" },
-    { href: "#jobs", text: "Jobs" },
-    { href: "#designers", text: "Designers" },
-    { href: "#freelancers", text: "Freelancers" },
-    { href: "#tags", text: "Tags" },
-    { href: "#places", text: "Places" },
-    { href: "#resources", text: "Resources" },
-  ];
-
+export function Footer() {
   return (
-    <footer className="text-black py-10">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row  items-center mb-6 lg:justify-center md:justify-between sm:justify-between">
-          <div className="font-cursive text-2xl font-semibold  ">Dribbble</div>
-          <div className="flex space-x-6 justify-center px-10  ">
-            {mainLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="hover:underline font-serif"
-              >
-                {link.text}
-              </a>
-            ))}
-          </div>
-        </div>
-        <div className="pt-6">
-          <div className="flex flex-col md:flex-row lg:justify-center sm:justify-between md:justify-between items-center">
-            <p className="mb-4 md:mb-0 font-serif">&copy; 2024 Dribbble</p>
-            <div className="flex flex-wrap space-x-6">
-              {additionalLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="hover:underline font-serif"
-                >
-                  {link.text}
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+    <footer className="flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t border-blue-gray-50 py-6 text-center md:justify-between px-4">
+      <p className=" font-cursive font-bold  text-3xl">
+        Dribbble
+      </p>
+      <ul className="flex flex-wrap items-center gap-y-2 gap-x-8  text-gray-950">
+        {links.map((link, index) => (
+          <li key={index}>
+            <a
+              href={link.href}
+              className="text-blue-gray-500 font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
+            >
+              {link.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+      {socialLinks.map((social, index) => (
+        <a
+          key={index}
+          href={social.href}
+          className="text-gray-900 hover:text-gray-900 dark:hover:text-white"
+        >
+          <social.icon className="w-5 h-5" />
+        </a>
+      ))}
+    </div>
     </footer>
   );
-};
-
-export default Footer;
+}

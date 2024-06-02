@@ -13,7 +13,7 @@ module.exports = {
         },
       },
       colors: {
-        "darker-black": "#000000",
+        "darker-black": "#/000000",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
